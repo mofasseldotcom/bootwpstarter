@@ -6,7 +6,7 @@
  */
 
 /**
- * Set the content width based on the theme's design and stylesheet.
+ * The content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
@@ -23,14 +23,11 @@ if ( ! function_exists( 'bootwp_framework_setup' ) ) :
 function bootwp_framework_setup() {
 
 	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on Boot WP Framework, use a find and replace
-	 * to change 'bootwp-framework' to the name of your theme in all the template files
+	 * This theme available for translation.
 	 */
 	load_theme_textdomain( 'bootwp-framework', get_template_directory() . '/languages' );
 
-	// Add default posts and comments RSS feed links to head.
+	// Default posts and comments RSS feed links added to head.
 	add_theme_support( 'automatic-feed-links' );
 
 	/*
@@ -42,9 +39,7 @@ function bootwp_framework_setup() {
 	add_theme_support( 'title-tag' );
 
 	/*
-	 * Enable support for Post Thumbnails on posts and pages.
-	 *
-	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+	 * Support for Post Thumbnails on posts and pages.
 	 */
 	//add_theme_support( 'post-thumbnails' );
 
@@ -62,14 +57,13 @@ function bootwp_framework_setup() {
 	) );
 
 	/*
-	 * Enable support for Post Formats.
-	 * See http://codex.wordpress.org/Post_Formats
+	 * Support for Post Formats.
 	 */
 	add_theme_support( 'post-formats', array(
 		'aside', 'image', 'video', 'quote', 'link',
 	) );
 
-	// Set up the WordPress core custom background feature.
+	// The WordPress core custom background feature set up .
 	add_theme_support( 'custom-background', apply_filters( 'bootwp_framework_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
@@ -80,8 +74,6 @@ add_action( 'after_setup_theme', 'bootwp_framework_setup' );
 
 /**
  * Register widget area.
- *
- * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
 function bootwp_framework_widgets_init() {
 	register_sidebar( array(
@@ -113,7 +105,7 @@ function bootwp_framework_scripts() {
 add_action( 'wp_enqueue_scripts', 'bootwp_framework_scripts' );
 
 /**
- * Implement the Custom Header feature.
+ * The Custom Header feature.
  */
 //require get_template_directory() . '/inc/custom-header.php';
 
