@@ -92,7 +92,10 @@ add_action( 'widgets_init', 'bootwp_framework_widgets_init' );
  * Enqueue scripts and styles.
  */
 function bootwp_framework_scripts() {
+
 	wp_enqueue_style('bootwp-framework-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css');
+
+	wp_enqueue_style('bootwp-framework-font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css');
 	
 	wp_enqueue_style( 'bootwp-framework-style', get_stylesheet_uri() );
 
