@@ -270,8 +270,8 @@ select,
 textarea {
   color: #404040;
   font-family: sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
+  font-size: 22.4px;
+  font-size: 1.4rem;
   line-height: 1.5;
 }
 
@@ -815,6 +815,10 @@ object {
 
 .gallery-caption {
   display: block;
+}
+
+body {
+  background: white;
 }
 
 /*# sourceMappingURL=style.css.map */
