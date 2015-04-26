@@ -21,16 +21,37 @@
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'bootwp-framework' ); ?></a>
 
-	<header id="masthead" class="site-header container" role="banner">
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</div><!-- .site-branding -->
+	<header id="masthead" class="site-header" role="banner">
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php _e( 'Primary Menu', 'bootwp-framework' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
+		<nav id="site-navigation" class="main-navigation navbar navbar-default" role="navigation">
+		  	<div class="container">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primary-menu">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo('name'); ?></a>
+		    </div>
+
+		        <?php
+		            wp_nav_menu( array(
+		                'menu'              => 'primary',
+		                'theme_location'    => 'primary',
+		                'depth'             => 2,
+		                'container'         => 'div',
+		                'container_class'   => 'collapse navbar-collapse',
+		        		'container_id'      => 'primary-menu',
+		                'menu_class'        => 'nav navbar-nav navbar-right',
+		                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+		                'walker'            => new wp_bootstrap_navwalker())
+		            );
+		        ?>
+		    </div>
+		</nav>
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

@@ -43,6 +43,9 @@ function bootwp_framework_setup() {
 	 */
 	//add_theme_support( 'post-thumbnails' );
 
+	// Register Custom Navigation Walker
+	require_once('inc/wp_bootstrap_navwalker.php');
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'bootwp-framework' ),
