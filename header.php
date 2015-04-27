@@ -40,7 +40,7 @@
 		            wp_nav_menu( array(
 		                'menu'              => 'primary',
 		                'theme_location'    => 'primary',
-		                'depth'             => 2,
+		                'depth'             => 4,
 		                'container'         => 'div',
 		                'container_class'   => 'collapse navbar-collapse',
 		        		'container_id'      => 'primary-menu',

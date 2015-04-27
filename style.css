@@ -169,7 +169,7 @@ hr {
 }
 
 ul, ol {
-  margin: 0 0 1.5em 0em;
+  margin: 0 0 1em 0em;
 }
 
 ul {
@@ -183,7 +183,7 @@ ol {
 li > ul,
 li > ol {
   margin-bottom: 0;
-  margin-left: 1.5em;
+  margin-left: .5em;
 }
 
 dt {
@@ -374,6 +374,11 @@ a:hover, a:active {
 @media screen and (min-width: 768px) {
   .main-navigation ul li:hover > ul {
     display: block;
+  }
+
+  .main-navigation ul li ul li > ul.dropdown-menu {
+    left: 95%;
+    top: 0;
   }
 }
 .site-main .comment-navigation, .site-main
