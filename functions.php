@@ -94,6 +94,7 @@ function bootwp_framework_widgets_init() {
 	}
 	//Copy and paste our custom function bellow to generate new widgets.
 	create_bootwp_framework_widget('Default Sidebar', 'default', 'Default sidebar for blog and page');
+	create_bootwp_framework_widget('Left Sidebar', 'left', 'Sidebar for left sidebar page template only');
 	create_bootwp_framework_widget('Footer Left Widget', 'footer_left', 'Content display able in footer left widget area only');
 	create_bootwp_framework_widget('Footer Middle Widget', 'footer_mid', 'Content display able in footer middle widget area only');
 	create_bootwp_framework_widget('Footer Right Widget', 'footer_right', 'Content display able in footer right widget area only');
