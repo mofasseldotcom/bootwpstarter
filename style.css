@@ -661,14 +661,18 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
-#secondary.widget-area {
+#sidebar.widget-area {
   border: 1px solid #cecece;
   padding-bottom: 15px;
   padding-top: 15px;
 }
 
-#secondary.widget-area .widget {
+#sidebar.widget-area .widget {
   border-bottom: 1px solid #cecece;
+}
+
+#sidebar.widget-area .widget:last-child {
+  border-bottom: none;
 }
 
 #footer-top {

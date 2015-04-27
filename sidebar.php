@@ -10,6 +10,6 @@ if ( ! is_active_sidebar( 'default' ) ) {
 }
 ?>
 
-<div id="secondary" class="widget-area col-sm-4" role="complementary">
+<div id="sidebar" class="widget-area col-sm-4" role="complementary">
 	<?php dynamic_sidebar( 'default' ); ?>
 </div><!-- #secondary -->
