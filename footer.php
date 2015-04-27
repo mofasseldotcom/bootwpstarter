@@ -10,12 +10,34 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer container" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'bootwp-framework' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'bootwp-framework' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'bootwp-framework' ), 'Boot WP Framework', '<a href="http://mofassel.me" rel="designer">Md Mofassel Hossain</a>' ); ?>
-		</div><!-- .site-info -->
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		
+		<nav id="footer-bottom" class="navbar navbar-inverse" role="navigation">
+		  	<div class="container">
+				<div class="row">
+		      	<div class="site-info col-md-6">
+					<a href="<?php echo esc_url( site_url() ); ?>">
+					<?php printf( __( 'Copyright &copy;', 'bootwp-framework' ), '' ); ?> <?php echo date('Y'); ?>
+					<span class="sep"> | </span>
+					<?php printf( __( 'All rights reserved by', 'bootwp-framework' ), '' ); ?> <?php bloginfo('name'); ?></a>
+				</div><!-- .site-info -->
+
+		        <?php
+		            wp_nav_menu( array(
+		                'menu'              => 'footer-links',
+		                'theme_location'    => 'footer-links',
+		                'depth'             => 1,
+		                'container'         => 'div',
+		                'container_class'   => 'col-md-6',
+		        		'container_id'      => 'footer-links',
+		                'menu_class'        => 'nav navbar-nav navbar-right',
+		                'fallback_cb'       => '',
+		                )
+		            );
+		        ?>
+		        </div>
+		    </div>
+		</nav>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

@@ -489,6 +489,57 @@ a:hover, a:active {
   outline: 0;
 }
 
+#footer-bottom .site-info {
+  margin: 15px auto;
+}
+
+#footer-bottom.navbar-default .site-info a {
+  color: #777;
+}
+#footer-bottom.navbar-default .site-info a:hover {
+  color: #444;
+}
+
+#footer-bottom.navbar-inverse .site-info a {
+  color: #9d9d9d;
+}
+#footer-bottom.navbar-inverse .site-info a:hover {
+  color: #f7f7f7;
+}
+
+@media screen and (max-width: 1024px) {
+  #footer-bottom .site-info {
+    text-align: center;
+  }
+}
+#footer-bottom.navbar {
+  margin-bottom: 0px;
+  border-radius: 0px;
+}
+
+@media screen and (max-width: 1024px) {
+  #footer-links .nav.navbar-nav.navbar-right {
+    float: none !important;
+  }
+
+  #footer-links .nav.navbar-nav {
+    text-align: center;
+  }
+
+  #footer-links .navbar-nav > li {
+    display: inline-block;
+    float: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  #footer-links .navbar-nav > li {
+    display: block;
+  }
+}
+#footer-links .nav.navbar-nav li a:hover {
+  text-decoration: underline;
+}
+
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/

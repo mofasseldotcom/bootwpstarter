@@ -46,9 +46,10 @@ function bootwp_framework_setup() {
 	// Register Custom Navigation Walker
 	require_once('inc/wp_bootstrap_navwalker.php');
 
-	// This theme uses wp_nav_menu() in one location.
+	// This theme uses wp_nav_menu() in two location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'bootwp-framework' ),
+		'footer-links' => __( 'Footer Links', 'bootwp-framework' ),
 	) );
 
 	/*
