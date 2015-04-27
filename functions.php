@@ -125,6 +125,19 @@ function bootwp_framework_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'bootwp_framework_scripts' );
 
+
+// Function 'bootwp_framework_add_editor_style' starts
+function bootwp_framework_add_editor_style() {
+
+	add_editor_style( get_stylesheet_uri() );
+
+} 
+// Function 'bootwp_framework_add_editor_style' ends
+
+add_action( 'init', 'bootwp_framework_add_editor_style' );
+// Hook into the 'init' action
+
+
 /**
  * The Custom Header feature.
  */
@@ -150,14 +163,18 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
-//Configuring excerpt button text
+// Function 'bootwp_framework_excerpt_more' starts
 function bootwp_framework_excerpt_more( $more ) {
 	return ' <a class="read-more btn btn-info pull-right" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'bootwp_framework') . '</a>';
 }
 add_filter( 'excerpt_more', 'bootwp_framework_excerpt_more' );
+// Hook into the 'excerpt_more' filter
 
-//Configuring excerpt length
+// Function 'bootwp_framework_excerpt_length' starts
 function bootwp_framework_excerpt_length( $length ) {
 	return 55;
 }
+// Function 'bootwp_framework_excerpt_length' ends
+
 add_filter( 'excerpt_length', 'bootwp_framework_excerpt_length', 999 );
+// Hook into the 'excerpt_length' filter
