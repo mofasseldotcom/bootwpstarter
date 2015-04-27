@@ -149,3 +149,15 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+//Configuring excerpt button text
+function bootwp_framework_excerpt_more( $more ) {
+	return ' <a class="read-more btn btn-info pull-right" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'bootwp_framework') . '</a>';
+}
+add_filter( 'excerpt_more', 'bootwp_framework_excerpt_more' );
+
+//Configuring excerpt length
+function bootwp_framework_excerpt_length( $length ) {
+	return 55;
+}
+add_filter( 'excerpt_length', 'bootwp_framework_excerpt_length', 999 );

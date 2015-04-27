@@ -445,6 +445,11 @@ input[type="submit"]:focus {
   padding: 9px 12px !important;
 }
 
+.entry-content a.read-more {
+  color: white;
+  margin-top: 5px;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
