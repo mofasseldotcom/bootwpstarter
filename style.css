@@ -361,7 +361,7 @@ hr {
 }
 
 ul, ol {
-  margin: 0 0 1.5em 3em;
+  margin: 0 0 1.5em 0em;
 }
 
 ul {
@@ -652,6 +652,38 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
+#footer-top {
+  background: none repeat scroll 0 0 #000000;
+}
+
+.footer-widget .widget-title {
+  color: #f7f7f7;
+  font-size: 2em;
+}
+
+.widget li {
+  list-style: none;
+}
+
+.widget a {
+  color: #444;
+  padding: 2px 0px;
+  display: block;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+.widget a:hover {
+  color: #000;
+  margin-left: 5px;
+}
+
+#footer-top .footer-widget a {
+  color: #777;
+}
+#footer-top .footer-widget a:hover {
+  color: #999;
+}
+
 .widget {
   margin: 0 0 1.5em;
   /* Make sure select elements fit in widgets. */
