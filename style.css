@@ -492,10 +492,11 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.main-navigation ul li:hover > ul {
-  display: block;
+@media screen and (min-width: 768px) {
+  .main-navigation ul li:hover > ul {
+    display: block;
+  }
 }
-
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
@@ -761,10 +762,6 @@ object {
 
 .gallery-caption {
   display: block;
-}
-
-body {
-  background: white;
 }
 
 /*# sourceMappingURL=style.css.map */
