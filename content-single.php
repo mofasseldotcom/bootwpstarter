@@ -11,6 +11,14 @@
 		<div class="entry-meta">
 			<?php bootwp_framework_posted_on(); ?>
 		</div><!-- .entry-meta -->
+
+		<?php if ( has_post_thumbnail() ) : ?>
+		<div class="single-post-thumbnail">
+			<a href="<?php the_permalink(); ?>">	
+			<?php the_post_thumbnail( 'large' ); ?>
+			</a>
+		</div>
+		<?php endif; ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

@@ -41,7 +41,7 @@ function bootwp_framework_setup() {
 	/*
 	 * Support for Post Thumbnails on posts and pages.
 	 */
-	//add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
 
 	// Register Custom Navigation Walker
 	require_once('inc/wp_bootstrap_navwalker.php');
@@ -83,7 +83,7 @@ function bootwp_framework_widgets_init() {
 
 	function create_bootwp_framework_widget($name, $id, $description){
 		register_sidebar( array(
-			'name'          => __( $name, 'bootwp-framework' ),
+			'name'          => $name,
 			'id'            => $id,
 			'description'   => $description,
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',

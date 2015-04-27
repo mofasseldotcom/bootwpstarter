@@ -13,6 +13,14 @@
 			<?php bootwp_framework_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
+
+		<?php if ( has_post_thumbnail() ) : ?>
+		<div class="post-thumbnail">
+			<a href="<?php the_permalink(); ?>">	
+			<?php the_post_thumbnail( 'thumbnail' ); ?>
+			</a>
+		</div>
+		<?php endif; ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

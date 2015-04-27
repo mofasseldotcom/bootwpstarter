@@ -8,7 +8,7 @@ Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: bootwp-framework
-Tags:
+Tags: black, white
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -402,7 +402,8 @@ table {
 # Forms
 --------------------------------------------------------------*/
 .search-form {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
+  margin-top: 15px;
   text-align: center;
 }
 
@@ -662,13 +663,13 @@ a:hover, a:active {
 # Widgets
 --------------------------------------------------------------*/
 #sidebar.widget-area {
-  border: 1px solid #cecece;
+  border: 1px solid #f7f7f7;
   padding-bottom: 15px;
   padding-top: 15px;
 }
 
 #sidebar.widget-area .widget {
-  border-bottom: 1px solid #cecece;
+  border-bottom: 1px solid #f7f7f7;
 }
 
 #sidebar.widget-area .widget:last-child {
@@ -723,9 +724,32 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+#main-content.content-area {
+  margin-bottom: 20px;
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
+.post-thumbnail {
+  float: left;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-top: 27px;
+}
+
+.single-post-thumbnail {
+  border: 2px solid #f7f7f7;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.single-post-thumbnail img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+}
+
 .sticky {
   display: block;
 }
