@@ -401,6 +401,11 @@ table {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
+.search-form {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
 button,
 input[type="button"],
 input[type="reset"],
@@ -656,6 +661,16 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
+#secondary.widget-area {
+  border: 1px solid #cecece;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+#secondary.widget-area .widget {
+  border-bottom: 1px solid #cecece;
+}
+
 #footer-top {
   background: none repeat scroll 0 0 #000000;
 }
