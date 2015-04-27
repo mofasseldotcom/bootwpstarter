@@ -80,15 +80,22 @@ add_action( 'after_setup_theme', 'bootwp_framework_setup' );
  * Register widget area.
  */
 function bootwp_framework_widgets_init() {
-	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'bootwp-framework' ),
-		'id'            => 'sidebar-1',
-		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h1 class="widget-title">',
-		'after_title'   => '</h1>',
-	) );
+
+	function create_bootwp_framework_widget($name, $id, $description){
+		register_sidebar( array(
+			'name'          => __( $name, 'bootwp-framework' ),
+			'id'            => $id,
+			'description'   => $description,
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		) );	
+	}
+	//Copy and paste our custom function bellow to generate new widgets.
+	create_bootwp_framework_widget('Default Sidebar', 'default', 'Default sidebar for blog and page');
+	create_bootwp_framework_widget('Footer Widget', 'footer-widget', 'Content of this widget will be displayed in footer only');
+
 }
 add_action( 'widgets_init', 'bootwp_framework_widgets_init' );
 
