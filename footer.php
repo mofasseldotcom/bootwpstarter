@@ -36,7 +36,7 @@
 		                'container_class'   => 'col-md-6',
 		        		'container_id'      => 'footer-links',
 		                'menu_class'        => 'nav navbar-nav navbar-right',
-		                'fallback_cb'       => '',
+		                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
 		                )
 		            );
 		        ?>

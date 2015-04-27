@@ -598,6 +598,31 @@ article.post {
   display: none;
 }
 
+/*front page blog*/
+.front-blog.post {
+  width: 48%;
+  margin-right: 2%;
+  float: left;
+}
+
+.front-blog.post:nth-child(2n) {
+  margin-right: 0%;
+  margin-left: 2%;
+}
+
+.front-blog .entry-title {
+  font-size: 1.5em;
+}
+
+.front-blog .post-thumbnail {
+  float: none;
+}
+
+.front-blog .post-thumbnail img {
+  width: 100%;
+}
+
+/*Page*/
 .page-content,
 .entry-content,
 .entry-summary {
