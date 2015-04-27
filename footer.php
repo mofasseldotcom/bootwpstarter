@@ -11,6 +11,11 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
+
+		<div id="footer-top" class="clear">
+				<?php get_sidebar('footer'); ?>		
+		</div><!-- /#footer-top -->
+		
 		
 		<nav id="footer-bottom" class="navbar navbar-inverse" role="navigation">
 		  	<div class="container">
@@ -38,6 +43,7 @@
 		        </div>
 		    </div>
 		</nav>
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
