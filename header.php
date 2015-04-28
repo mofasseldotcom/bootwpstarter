@@ -33,9 +33,15 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <div class="site-title">
-		      <a class="site-title navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo('name'); ?></a>
-		      </span>
+				<?php if (get_theme_mod('site_logo')): ?>
+					<span class="site-logo">
+						<img src="<?php echo get_theme_mod('site_logo'); ?>" alt=""> 
+					</span>
+				<?php else : ?>
+			      <span class="site-title">
+			      <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo('name'); ?></a>
+			      </span>				
+				<?php endif ?>
 		    </div>
 
 		        <?php
