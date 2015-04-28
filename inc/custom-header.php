@@ -26,8 +26,8 @@ function bootwp_framework_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'bootwp_framework_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
-		'width'                  => 1000,
-		'height'                 => 250,
+		'width'                  => 1350,
+		'height'                 => 350,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'bootwp_framework_header_style',
 		'admin-head-callback'    => 'bootwp_framework_admin_header_style',
