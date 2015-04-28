@@ -34,9 +34,9 @@
 		        <span class="icon-bar"></span>
 		      </button>
 				<?php if (get_theme_mod('site_logo')): ?>
-					<span class="site-logo">
+					<a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
 						<img src="<?php echo get_theme_mod('site_logo'); ?>" alt=""> 
-					</span>
+					</a>
 				<?php else : ?>
 			      <span class="site-title">
 			      <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo('name'); ?></a>
