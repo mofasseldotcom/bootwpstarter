@@ -385,6 +385,10 @@ a:hover, a:active {
 ## Menus
 --------------------------------------------------------------*/
 @media screen and (min-width: 768px) {
+  .main-navigation.navbar {
+    padding: 15px 0;
+  }
+
   .main-navigation ul li:hover > ul {
     display: block;
   }
