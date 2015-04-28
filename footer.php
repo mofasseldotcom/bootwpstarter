@@ -20,12 +20,27 @@
 		<nav id="footer-bottom" class="navbar navbar-inverse" role="navigation">
 		  	<div class="container">
 				<div class="row">
-		      	<div class="site-info col-md-6">
+
+				<?php if ( get_theme_mod('copyright_text') ): ?>
+				<div class="site-info col-md-6">
+					<a href="<?php echo esc_url( site_url() ); ?>">
+						<?php echo get_theme_mod('copyright_text'); ?>
+					</a>
+				</div><!-- .site-info -->
+				<?php else : ?>
+				<div class="site-info col-md-6">
 					<a href="<?php echo esc_url( site_url() ); ?>">
 					<?php printf( __( 'Copyright &copy;', 'bootwp-framework' ), '' ); ?> <?php echo date('Y'); ?>
 					<span class="sep"> | </span>
 					<?php printf( __( 'All rights reserved by', 'bootwp-framework' ), '' ); ?> <?php bloginfo('name'); ?></a>
 				</div><!-- .site-info -->
+				<?php endif ?>
+				
+
+		      	
+
+
+
 
 		        <?php
 		            wp_nav_menu( array(

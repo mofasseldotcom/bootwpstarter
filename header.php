@@ -33,7 +33,9 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
+		      <div class="site-title">
 		      <a class="site-title navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo('name'); ?></a>
+		      </span>
 		    </div>
 
 		        <?php

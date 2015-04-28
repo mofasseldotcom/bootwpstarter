@@ -140,11 +140,6 @@ add_action( 'init', 'bootwp_framework_add_editor_style' );
 
 
 /**
- * The Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
-
-/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
@@ -158,11 +153,6 @@ require get_template_directory() . '/inc/extras.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/inc/jetpack.php';
 
 // Function 'bootwp_framework_excerpt_more' starts
 function bootwp_framework_excerpt_more( $more ) {
