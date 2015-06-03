@@ -1,13 +1,13 @@
 /*
 Theme Name: Boot WP Framework
-Theme URI: http://underscores.me/
+Theme URI: https://github.com/webitbuzz/bootwp_framework
 Author: Md Mofassel Hossain
 Author URI: http://mofassel.me
 Description: A multipurpose WordPress theme framework built using underscore and bootstrap.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: bootwp-framework
+Text Domain: bootwp_framework
 Tags: black, white
 
 This theme, like WordPress, is licensed under the GPL.
@@ -368,10 +368,27 @@ a:hover, a:active {
   text-decoration: underline;
 }
 
+/*Post pagination*/
+.nav-links .page-numbers {
+  background: none repeat scroll 0 0 #31b0d5;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 700;
+  padding: 10px 20px;
+}
+
+.nav-links .page-numbers.current {
+  color: red;
+}
+
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
 @media screen and (min-width: 768px) {
+  .main-navigation.navbar {
+    padding: 15px 0;
+  }
+
   .main-navigation ul li:hover > ul {
     display: block;
   }

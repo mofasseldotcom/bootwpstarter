@@ -33,4 +33,18 @@
 			}
 		} );
 	} );
+
+
+	wp.customize( 'copyright_text', function( value ) {
+		value.bind( function( to ) {
+			$( '.site-info a' ).text( to );
+		} );
+	} );
+
+	// wp.customize( 'site_logo', function( value ) {
+	// 	value.bind( function( to ) {
+	// 		false == to ? $('.site_logo img').hide() : $('.site_logo img').show();
+	// 	} );
+	// } );
+
 } )( jQuery );

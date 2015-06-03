@@ -33,7 +33,15 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo('name'); ?></a>
+				<?php if (get_theme_mod('site_logo')): ?>
+					<a class="site-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+						<img src="<?php echo get_theme_mod('site_logo'); ?>" alt=""> 
+					</a>
+				<?php else : ?>
+			      <span class="site-title">
+			      <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo('name'); ?></a>
+			      </span>				
+				<?php endif ?>
 		    </div>
 
 		        <?php
@@ -51,6 +59,13 @@
 		        ?>
 		    </div>
 		</nav>
+
+
+<?php if ( get_header_image() && is_front_page() ) : ?>
+<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+	<img style="width: 100%;margin-top: -20px;" id="header-banner" src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
+</a>
+<?php endif; // End header image check. ?>
 
 	</header><!-- #masthead -->
 

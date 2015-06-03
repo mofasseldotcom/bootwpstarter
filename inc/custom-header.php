@@ -1,48 +1,38 @@
 <?php
 /**
- * Sample implementation of the Custom Header feature
- * http://codex.wordpress.org/Custom_Headers
+ * Custom Header feature
  *
- * You can add an optional custom header image to header.php like so ...
-
-	<?php if ( get_header_image() ) : ?>
-	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-		<img src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
-	</a>
-	<?php endif; // End header image check. ?>
-
- *
- * @package Boot WP Framework
+ * @package Boot WP
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses bootwp_framework_header_style()
- * @uses bootwp_framework_admin_header_style()
- * @uses bootwp_framework_admin_header_image()
+ * @uses bootwp_header_style()
+ * @uses bootwp_admin_header_style()
+ * @uses bootwp_admin_header_image()
  */
-function bootwp_framework_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'bootwp_framework_custom_header_args', array(
+function bootwp_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'bootwp_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'bootwp_framework_header_style',
-		'admin-head-callback'    => 'bootwp_framework_admin_header_style',
-		'admin-preview-callback' => 'bootwp_framework_admin_header_image',
+		'wp-head-callback'       => 'bootwp_header_style',
+		'admin-head-callback'    => 'bootwp_admin_header_style',
+		'admin-preview-callback' => 'bootwp_admin_header_image',
 	) ) );
 }
-add_action( 'after_setup_theme', 'bootwp_framework_custom_header_setup' );
+add_action( 'after_setup_theme', 'bootwp_custom_header_setup' );
 
-if ( ! function_exists( 'bootwp_framework_header_style' ) ) :
+if ( ! function_exists( 'bootwp_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see bootwp_framework_custom_header_setup().
+ * @see bootwp_custom_header_setup().
  */
-function bootwp_framework_header_style() {
+function bootwp_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	// If no custom options for text are set, let's bail
@@ -69,21 +59,21 @@ function bootwp_framework_header_style() {
 	?>
 		.site-title a,
 		.site-description {
-			color: #<?php echo esc_attr( $header_text_color ); ?>;
+			color: #<?php echo esc_attr( $header_text_color ); ?> !important;
 		}
 	<?php endif; ?>
 	</style>
 	<?php
 }
-endif; // bootwp_framework_header_style
+endif; // bootwp_header_style
 
-if ( ! function_exists( 'bootwp_framework_admin_header_style' ) ) :
+if ( ! function_exists( 'bootwp_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * @see bootwp_framework_custom_header_setup().
+ * @see bootwp_custom_header_setup().
  */
-function bootwp_framework_admin_header_style() {
+function bootwp_admin_header_style() {
 ?>
 	<style type="text/css">
 		.appearance_page_custom-header #headimg {
@@ -103,15 +93,15 @@ function bootwp_framework_admin_header_style() {
 	</style>
 <?php
 }
-endif; // bootwp_framework_admin_header_style
+endif; // bootwp_admin_header_style
 
-if ( ! function_exists( 'bootwp_framework_admin_header_image' ) ) :
+if ( ! function_exists( 'bootwp_admin_header_image' ) ) :
 /**
  * Custom header image markup displayed on the Appearance > Header admin panel.
  *
- * @see bootwp_framework_custom_header_setup().
+ * @see bootwp_custom_header_setup().
  */
-function bootwp_framework_admin_header_image() {
+function bootwp_admin_header_image() {
 	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
 ?>
 	<div id="headimg">
@@ -123,4 +113,4 @@ function bootwp_framework_admin_header_image() {
 	</div>
 <?php
 }
-endif; // bootwp_framework_admin_header_image
+endif; // bootwp_admin_header_image
