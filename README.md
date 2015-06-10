@@ -17,6 +17,6 @@ Submit your pull request and I will check it.
 
 ## Copyright and license
 
-Copyright 2014 webitbuzz under GPL 3.0(LICENSE)
+Copyright 2015 webitbuzz under GPL 3.0(LICENSE)
 
 ###Good luck!
