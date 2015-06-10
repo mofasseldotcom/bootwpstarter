@@ -2,7 +2,7 @@
 /**
  * The template part for displaying results in search pages.
  *
- * @package Boot WP Framework
+ * @package Boot WP Starter
  */
 ?>
 
@@ -12,7 +12,7 @@
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php bootwp_framework_posted_on(); ?>
+			<?php bootwpstarter_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
@@ -22,6 +22,6 @@
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
-		<?php bootwp_framework_entry_footer(); ?>
+		<?php bootwpstarter_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

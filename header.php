@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package Boot WP Framework
+ * @package Boot WP Starter
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -19,7 +19,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'bootwp-framework' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'bootwpstarter' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
 

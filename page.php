@@ -2,7 +2,7 @@
 /**
  * The template for displaying all pages by default.
  *
- * @package Boot WP Framework
+ * @package Boot WP Starter
  */
 
 get_header(); ?>

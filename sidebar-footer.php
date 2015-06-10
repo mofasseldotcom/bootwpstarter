@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the footer widget area.
  *
- * @package Boot WP Framework
+ * @package Boot WP Starter
  */
 ?>
 <div class="container">

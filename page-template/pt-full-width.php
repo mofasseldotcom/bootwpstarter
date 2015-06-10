@@ -2,7 +2,7 @@
 /**
  * Template Name: Full Width Page
  *
- * @package Boot WP Framework
+ * @package Boot WP Starter
  */
 
 get_header(); ?>

@@ -8,31 +8,31 @@
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses bootwp_header_style()
- * @uses bootwp_admin_header_style()
- * @uses bootwp_admin_header_image()
+ * @uses bootwpstarter_header_style()
+ * @uses bootwpstarter_admin_header_style()
+ * @uses bootwpstarter_admin_header_image()
  */
-function bootwp_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'bootwp_custom_header_args', array(
+function bootwpstarter_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'bootwpstarter_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'bootwp_header_style',
-		'admin-head-callback'    => 'bootwp_admin_header_style',
-		'admin-preview-callback' => 'bootwp_admin_header_image',
+		'wp-head-callback'       => 'bootwpstarter_header_style',
+		'admin-head-callback'    => 'bootwpstarter_admin_header_style',
+		'admin-preview-callback' => 'bootwpstarter_admin_header_image',
 	) ) );
 }
-add_action( 'after_setup_theme', 'bootwp_custom_header_setup' );
+add_action( 'after_setup_theme', 'bootwpstarter_custom_header_setup' );
 
-if ( ! function_exists( 'bootwp_header_style' ) ) :
+if ( ! function_exists( 'bootwpstarter_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see bootwp_custom_header_setup().
+ * @see bootwpstarter_custom_header_setup().
  */
-function bootwp_header_style() {
+function bootwpstarter_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	// If no custom options for text are set, let's bail
@@ -65,15 +65,15 @@ function bootwp_header_style() {
 	</style>
 	<?php
 }
-endif; // bootwp_header_style
+endif; // bootwpstarter_header_style
 
-if ( ! function_exists( 'bootwp_admin_header_style' ) ) :
+if ( ! function_exists( 'bootwpstarter_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * @see bootwp_custom_header_setup().
+ * @see bootwpstarter_custom_header_setup().
  */
-function bootwp_admin_header_style() {
+function bootwpstarter_admin_header_style() {
 ?>
 	<style type="text/css">
 		.appearance_page_custom-header #headimg {
@@ -93,15 +93,15 @@ function bootwp_admin_header_style() {
 	</style>
 <?php
 }
-endif; // bootwp_admin_header_style
+endif; // bootwpstarter_admin_header_style
 
-if ( ! function_exists( 'bootwp_admin_header_image' ) ) :
+if ( ! function_exists( 'bootwpstarter_admin_header_image' ) ) :
 /**
  * Custom header image markup displayed on the Appearance > Header admin panel.
  *
- * @see bootwp_custom_header_setup().
+ * @see bootwpstarter_custom_header_setup().
  */
-function bootwp_admin_header_image() {
+function bootwpstarter_admin_header_image() {
 	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
 ?>
 	<div id="headimg">
@@ -113,4 +113,4 @@ function bootwp_admin_header_image() {
 	</div>
 <?php
 }
-endif; // bootwp_admin_header_image
+endif; // bootwpstarter_admin_header_image

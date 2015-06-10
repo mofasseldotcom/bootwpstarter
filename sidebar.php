@@ -2,7 +2,7 @@
 /**
  * The sidebar containing the main widget area.
  *
- * @package Boot WP Framework
+ * @package Boot WP Starter
  */
 
 if ( ! is_active_sidebar( 'default' ) ) {

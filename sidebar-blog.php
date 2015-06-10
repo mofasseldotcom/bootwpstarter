@@ -2,7 +2,7 @@
 /**
  * The sidebar containing widgets for blog only.
  *
- * @package Boot WP Framework
+ * @package Boot WP Starter
  */
 
 ?>

@@ -6,7 +6,7 @@
  * and one of the two required files for a theme (the other being style.css).
  * It is used to display a page when nothing more specific matches a query.
  *
- * @package Boot WP Framework
+ * @package Boot WP Starter
  */
 
 get_header(); ?>

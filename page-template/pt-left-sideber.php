@@ -2,7 +2,7 @@
 /**
  * Template Name: Left Sidebar Page
  *
- * @package Boot WP Framework
+ * @package Boot WP Starter
  */
 
 get_header(); ?>

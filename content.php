@@ -1,6 +1,6 @@
 <?php
 /**
- * @package Boot WP Framework
+ * @package Boot WP Starter
  */
 ?>
 
@@ -10,7 +10,7 @@
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php bootwp_framework_posted_on(); ?>
+			<?php bootwpstarter_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 
@@ -31,13 +31,13 @@
 
 		<?php
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'bootwp-framework' ),
+				'before' => '<div class="page-links">' . __( 'Pages:', 'bootwpstarter' ),
 				'after'  => '</div>',
 			) );
 		?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php bootwp_framework_entry_footer(); ?>
+		<?php bootwpstarter_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

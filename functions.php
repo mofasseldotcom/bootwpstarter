@@ -1,8 +1,8 @@
 <?php
 /**
- * Boot WP Framework functions and definitions
+ * Boot WP Starter functions and definitions
  *
- * @package Boot WP Framework
+ * @package Boot WP Starter
  */
 
 /**
@@ -12,7 +12,7 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 640; /* pixels */
 }
 
-if ( ! function_exists( 'bootwp_framework_setup' ) ) :
+if ( ! function_exists( 'bootwpstarter_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -20,12 +20,12 @@ if ( ! function_exists( 'bootwp_framework_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function bootwp_framework_setup() {
+function bootwpstarter_setup() {
 
 	/*
 	 * This theme available for translation.
 	 */
-	load_theme_textdomain( 'bootwp-framework', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'bootwpstarter', get_template_directory() . '/languages' );
 
 	// Default posts and comments RSS feed links added to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -48,8 +48,8 @@ function bootwp_framework_setup() {
 
 	// This theme uses wp_nav_menu() in two location.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'bootwp-framework' ),
-		'footer-links' => __( 'Footer Links', 'bootwp-framework' ),
+		'primary' => __( 'Primary Menu', 'bootwpstarter' ),
+		'footer-links' => __( 'Footer Links', 'bootwpstarter' ),
 	) );
 
 	/*
@@ -68,20 +68,20 @@ function bootwp_framework_setup() {
 	) );
 
 	// The WordPress core custom background feature set up .
-	add_theme_support( 'custom-background', apply_filters( 'bootwp_framework_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'bootwpstarter_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
 }
-endif; // bootwp_framework_setup
-add_action( 'after_setup_theme', 'bootwp_framework_setup' );
+endif; // bootwpstarter_setup
+add_action( 'after_setup_theme', 'bootwpstarter_setup' );
 
 /**
  * Register widget area.
  */
-function bootwp_framework_widgets_init() {
+function bootwpstarter_widgets_init() {
 
-	function create_bootwp_framework_widget($name, $id, $description){
+	function create_bootwpstarter_widget($name, $id, $description){
 		register_sidebar( array(
 			'name'          => $name,
 			'id'            => $id,
@@ -93,49 +93,49 @@ function bootwp_framework_widgets_init() {
 		) );	
 	}
 	//Copy and paste our custom function bellow to generate new widgets.
-	create_bootwp_framework_widget('Default Sidebar', 'default', 'Default sidebar for blog and page');
-	create_bootwp_framework_widget('Blog Sidebar', 'blog', 'Sidebar for blog only');
-	create_bootwp_framework_widget('Front Page Blog Sidebar', 'front', 'Sidebar for front page blog only');
-	create_bootwp_framework_widget('Left Sidebar', 'left', 'Sidebar for left sidebar page template only');
-	create_bootwp_framework_widget('Footer Left Widget', 'footer_left', 'Content display able in footer left widget area only');
-	create_bootwp_framework_widget('Footer Middle Widget', 'footer_mid', 'Content display able in footer middle widget area only');
-	create_bootwp_framework_widget('Footer Right Widget', 'footer_right', 'Content display able in footer right widget area only');
+	create_bootwpstarter_widget('Default Sidebar', 'default', 'Default sidebar for blog and page');
+	create_bootwpstarter_widget('Blog Sidebar', 'blog', 'Sidebar for blog only');
+	create_bootwpstarter_widget('Front Page Blog Sidebar', 'front', 'Sidebar for front page blog only');
+	create_bootwpstarter_widget('Left Sidebar', 'left', 'Sidebar for left sidebar page template only');
+	create_bootwpstarter_widget('Footer Left Widget', 'footer_left', 'Content display able in footer left widget area only');
+	create_bootwpstarter_widget('Footer Middle Widget', 'footer_mid', 'Content display able in footer middle widget area only');
+	create_bootwpstarter_widget('Footer Right Widget', 'footer_right', 'Content display able in footer right widget area only');
 
 }
-add_action( 'widgets_init', 'bootwp_framework_widgets_init' );
+add_action( 'widgets_init', 'bootwpstarter_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function bootwp_framework_scripts() {
+function bootwpstarter_scripts() {
 
-	wp_enqueue_style('bootwp-framework-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css');
+	wp_enqueue_style('bootwpstarter-bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css');
 
-	wp_enqueue_style('bootwp-framework-font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css');
+	wp_enqueue_style('bootwpstarter-font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css');
 	
-	wp_enqueue_style( 'bootwp-framework-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'bootwpstarter-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'bootwp-framework-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
-	wp_enqueue_script('bootwp-framework-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '3.3.4', true);
+	wp_enqueue_script( 'bootwpstarter-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script('bootwpstarter-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '3.3.4', true);
 	
-	wp_enqueue_script( 'bootwp-framework-customjs', get_template_directory_uri() . '/js/custom.min.js', array(), '20150422', true );
+	wp_enqueue_script( 'bootwpstarter-customjs', get_template_directory_uri() . '/js/custom.min.js', array(), '20150422', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'bootwp_framework_scripts' );
+add_action( 'wp_enqueue_scripts', 'bootwpstarter_scripts' );
 
 
-// Function 'bootwp_framework_add_editor_style' starts
-function bootwp_framework_add_editor_style() {
+// Function 'bootwpstarter_add_editor_style' starts
+function bootwpstarter_add_editor_style() {
 
 	add_editor_style( get_stylesheet_uri() );
 
 } 
-// Function 'bootwp_framework_add_editor_style' ends
+// Function 'bootwpstarter_add_editor_style' ends
 
-add_action( 'init', 'bootwp_framework_add_editor_style' );
+add_action( 'init', 'bootwpstarter_add_editor_style' );
 // Hook into the 'init' action
 
 
@@ -159,18 +159,18 @@ require get_template_directory() . '/inc/extras.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
-// Function 'bootwp_framework_excerpt_more' starts
-function bootwp_framework_excerpt_more( $more ) {
-	return ' <a class="read-more btn btn-info pull-right" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'bootwp_framework') . '</a>';
+// Function 'bootwpstarter_excerpt_more' starts
+function bootwpstarter_excerpt_more( $more ) {
+	return ' <a class="read-more btn btn-info pull-right" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'bootwpstarter') . '</a>';
 }
-add_filter( 'excerpt_more', 'bootwp_framework_excerpt_more' );
+add_filter( 'excerpt_more', 'bootwpstarter_excerpt_more' );
 // Hook into the 'excerpt_more' filter
 
-// Function 'bootwp_framework_excerpt_length' starts
-function bootwp_framework_excerpt_length( $length ) {
+// Function 'bootwpstarter_excerpt_length' starts
+function bootwpstarter_excerpt_length( $length ) {
 	return 55;
 }
-// Function 'bootwp_framework_excerpt_length' ends
+// Function 'bootwpstarter_excerpt_length' ends
 
-add_filter( 'excerpt_length', 'bootwp_framework_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'bootwpstarter_excerpt_length', 999 );
 // Hook into the 'excerpt_length' filter

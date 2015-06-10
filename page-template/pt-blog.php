@@ -2,7 +2,7 @@
 /**
  * Template Name: Blog Page.
  *
- * @package Boot WP Framework
+ * @package Boot WP Starter
  */
 
 get_header(); ?>

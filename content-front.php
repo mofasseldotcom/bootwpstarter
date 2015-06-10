@@ -1,6 +1,6 @@
 <?php
 /**
- * @package Boot WP Framework
+ * @package Boot WP Starter
  */
 ?>
 

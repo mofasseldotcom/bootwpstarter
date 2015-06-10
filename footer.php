@@ -4,7 +4,7 @@
  *
  * Contains the closing of the #content div and all content after
  *
- * @package Boot WP Framework
+ * @package Boot WP Starter
  */
 ?>
 
@@ -30,9 +30,9 @@
 				<?php else : ?>
 				<div class="site-info col-md-6">
 					<a href="<?php echo esc_url( site_url() ); ?>">
-					<?php printf( __( 'Copyright &copy;', 'bootwp-framework' ), '' ); ?> <?php echo date('Y'); ?>
+					<?php printf( __( 'Copyright &copy;', 'bootwpstarter' ), '' ); ?> <?php echo date('Y'); ?>
 					<span class="sep"> | </span>
-					<?php printf( __( 'All rights reserved by', 'bootwp-framework' ), '' ); ?> <?php bloginfo('name'); ?></a>
+					<?php printf( __( 'All rights reserved by', 'bootwpstarter' ), '' ); ?> <?php bloginfo('name'); ?></a>
 				</div><!-- .site-info -->
 				<?php endif ?>
 				

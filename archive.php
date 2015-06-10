@@ -2,7 +2,7 @@
 /**
  * The template for displaying archive pages.
  *
- * @package Boot WP Framework
+ * @package Boot WP Starter
  */
 
 get_header(); ?>

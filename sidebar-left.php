@@ -2,7 +2,7 @@
 /**
  * The sidebar containing widgets for left sidebar template only.
  *
- * @package Boot WP Framework
+ * @package Boot WP Starter
  */
 
 ?>
