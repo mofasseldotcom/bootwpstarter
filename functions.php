@@ -159,6 +159,11 @@ require get_template_directory() . '/inc/extras.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
+/**
+ * Theme options additions.
+ */
+require get_template_directory() . '/inc/theme-options/to-functions.php';
+
 // Function 'bootwpstarter_excerpt_more' starts
 function bootwpstarter_excerpt_more( $more ) {
 	return ' <a class="read-more btn btn-info pull-right" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'bootwpstarter') . '</a>';
