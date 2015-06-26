@@ -23,7 +23,7 @@
 
 	<header id="masthead" class="site-header" role="banner">
 
-		<nav id="site-navigation" class="main-navigation navbar navbar-default" role="navigation">
+		<nav id="site-navigation" class="main-navigation navbar navbar-fixed-top" role="navigation">
 		  	<div class="container">
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
@@ -65,6 +65,8 @@
 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 	<img style="width: 100%;margin-top: -20px;" id="header-banner" src="<?php header_image(); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="">
 </a>
+<?php elseif ( !get_header_image() && is_front_page() ) : ?>
+	<div class="margin-top" style="margin-top:80px;"></div>
 <?php endif; // End header image check. ?>
 
 	</header><!-- #masthead -->
