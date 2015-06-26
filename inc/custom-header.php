@@ -17,7 +17,7 @@ function bootwpstarter_custom_header_setup() {
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
-		'height'                 => 250,
+		'height'                 => 350,
 		'flex-height'            => true,
 		'wp-head-callback'       => 'bootwpstarter_header_style',
 		'admin-head-callback'    => 'bootwpstarter_admin_header_style',

@@ -384,6 +384,51 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+body.logged-in.admin-bar nav#site-navigation {
+  margin-top: 32px;
+}
+.home .site-content {
+  margin-top: 0px;
+}
+.site-content {
+  margin-top: 81px;
+}
+.page .main-navigation {
+  background: #f7f7f7 none repeat scroll 0 0;
+}
+.main-navigation ul li a {
+  color: #000000;
+  font-size: 16px;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  -ms-transition: all .5s;
+  transition: all .5s;
+}
+.nav > li > a:focus, .nav > li > a:hover {
+  background-color: transparent;
+  text-decoration: none;
+  color: brown;
+}
+.nav .open > a, .nav .open > a:focus, .nav .open > a:hover {
+  background-color: transparent;
+  border-color: #337ab7;
+  color: brown;
+}
+.main-navigation.customNav  {
+  background: none repeat scroll 0 0 #000000;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  -ms-transition: all 1s;
+  transition: all 1s;
+}
+.main-navigation.customNav ul > li a  {
+  color: #ffffff;
+}
+.main-navigation.customNav ul li ul li a {
+  color: #000000;
+}
 @media screen and (min-width: 768px) {
   .main-navigation.navbar {
     padding: 15px 0;
