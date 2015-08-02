@@ -3,20 +3,17 @@ Theme Name: Boot WP Starter
 Theme URI: https://github.com/webitbuzz/bootwpstarter
 Author: Md Mofassel Hossain
 Author URI: http://mofassel.me
-Description: A multipurpose WordPress theme framework built using underscore and bootstrap.
+Description: A multipurpose WordPress starter theme framework built using underscore and bootstrap.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: bootwpstarter
-Tags: black, white
+Tags: black, brown, white, light, one-column, two-columns, right-sidebar, flexible-width, custom-header, custom-menu, editor-style, featured-images, post-formats, sticky-post, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-Boot WP Starter is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+Boot WP Starter is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc. and Bootstrap v3.3.4 (http://getbootstrap.com)
 */
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
@@ -42,8 +39,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Galleries
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-# Normalize : Commented and used from bootstrap css 
-# @import "normalize";
+# Normalize : removed and used from bootstrap css 
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Typography
@@ -97,6 +93,7 @@ dfn, cite, em, i {
 
 blockquote {
   margin: 0 1.5em;
+  background: #f7f7f7;
 }
 
 address {
@@ -174,16 +171,20 @@ ul, ol {
 
 ul {
   list-style: disc;
+  padding-left: 1.5em;
 }
 
 ol {
   list-style: decimal;
+  padding-left: 1.5em;
 }
 
 li > ul,
 li > ol {
   margin-bottom: 0;
-  margin-left: .5em;
+}
+ul li, ol li {
+  padding: 5px 0px;
 }
 
 dt {
@@ -204,6 +205,22 @@ img {
 table {
   margin: 0 0 1.5em;
   width: 100%;
+}
+table, table tr, table tr th, table tr td {
+  border: 1px solid #F5F5F5;
+}
+table tr {
+  background: #ececec;
+}
+table tr.odd {
+  background: #FFFFFF;
+}
+table tr.even {
+  background: #F9F9F9;
+}
+table tr th, 
+table tr td {
+  padding: 5px;
 }
 
 /*--------------------------------------------------------------
@@ -433,7 +450,12 @@ body.logged-in.admin-bar nav#site-navigation {
   .main-navigation.navbar {
     padding: 15px 0;
   }
-
+  .main-navigation .navbar-brand  {
+    color: #000000;
+  }
+  .main-navigation.customNav .navbar-header .navbar-brand  {
+    color: #FFFFFF;
+  }
   .main-navigation ul li:hover > ul {
     display: block;
   }
@@ -573,11 +595,31 @@ body.logged-in.admin-bar nav#site-navigation {
 .widget li {
   list-style: none;
 }
+.widget_recent_entries li:before,
+.widget_recent_comments li:before,
+.widget_archive li:before,
+.widget_categories li:before {
+    font-family: fontawesome;
+    padding: 0px 5px 0px 0px;
+    display: inline-block;
+}
+.widget_recent_entries li:before {
+  content: "\f14b";
+}
+.widget_recent_comments li:before {
+    content: "\f075";
+}
+.widget_archive li:before {
+  content: "\f187";
+}
+.widget_categories li:before {
+  content: "\f15c";
+}
 
 .widget a {
   color: #444;
   padding: 2px 0px;
-  display: block;
+  display: inline-block;
   -webkit-transition: all .5s;
   transition: all .5s;
 }
@@ -968,5 +1010,3 @@ object {
 .gallery-caption {
   display: block;
 }
-
-/*# sourceMappingURL=style.css.map */
